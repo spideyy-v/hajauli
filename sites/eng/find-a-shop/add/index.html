@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Your Own Service</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Logo">
+        <h1>Add Your Own Service</h1>
+        <h2>Services Or Shops to Our Directory</h2>
+
+        <ul class="instructions">
+            <li>Fill all the fields and upload a relevant image for your service or shop.</li>
+            <li>Image format: <b>.png</b> / <b>.jpg</b> / <b>.jpeg</b></li>
+        </ul>
+
+        <hr>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <h2><ion-icon name="construct"></ion-icon> Service Details</h2>
+            <div class="form-group">
+                <label for="category"><ion-icon name="grid-outline"></ion-icon> Category</label>
+                <select name="category" id="category">
+                    <option value="">--- Choose a Category ---</option>
+                    <option value="service">Service</option>
+                    <option value="shop">Shop</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Service_Name"><ion-icon name="construct-outline"></ion-icon> Service Name</label>
+                <input type="text" name="Service_Name" id="Service_Name" placeholder="Enter Service Name..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="Service_Image"><ion-icon name="images-outline"></ion-icon> Upload Image</label>
+                <input type="file" name="Service_Image" id="Service_Image" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Service_Description"><ion-icon name="newspaper-outline"></ion-icon> Description</label>
+                <textarea name="Service_Description" id="Service_Description" placeholder="Enter Service Details..."
+                    required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="Service_Location"><ion-icon name="location-outline"></ion-icon> Location</label>
+                <input type="text" name="Service_Location" id="Service_Location" placeholder="Enter Service Location..."
+                    required>
+            </div>
+
+            <hr>
+
+            <h2><ion-icon name="person"></ion-icon> Service Provider Details</h2>
+            <div class="form-group">
+                <label for="Provider_Name"><ion-icon name="person-circle-outline"></ion-icon> Your Name</label>
+                <input type="text" name="Provider_Name" id="Provider_Name"
+                    placeholder="Enter Service Provider's Name..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="Provider_Image"><ion-icon name="cloud-upload-outline"></ion-icon> Upload Your Image</label>
+                <input type="file" name="Provider_Image" id="Provider_Image" accept="image/*" required>
+            </div>
+
+            <hr>
+
+            <h2><ion-icon name="phone-portrait-outline"></ion-icon> Contact Details</h2>
+            <div class="form-group">
+                <label for="Phone_No"><ion-icon name="call-outline"></ion-icon> Phone Number</label>
+                <input type="tel" name="Phone_No" id="Phone_No" placeholder="+91 xxxxx xxxxx" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Whatsapp_No"><ion-icon name="logo-whatsapp"></ion-icon> Whatsapp Number</label>
+                <input type="tel" name="Whatsapp_No" id="Whatsapp_No" placeholder="+91 xxxxx xxxxx" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Email"><ion-icon name="mail-open-outline"></ion-icon> Email</label>
+                <input type="email" name="Email" id="Email" placeholder="example@mail.com" required>
+            </div>
+
+            <div class="form-actions">
+                <input type="submit" value="⇡ Submit">
+                <input type="reset" value="⟳ Reset">
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
