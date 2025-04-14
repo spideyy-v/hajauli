@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Your Advertisment</title>
+<link rel="Icon" href="Files/Logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<body>
+<div class="container">
+    <img src="files/logo.png" alt="Logo">
+    <h1>Get Your Advertisment</h1>
+    <h2>Before you Start, Make sure you have the following information:</h2>
+    <ul class="instructions">
+        <li>Fill all the fields. Upload a Poster/Banner related to the Service.</li>
+        <li>Upload File only on Image ( <b>.png</b> / <b>.jpg</b> / <b>.jpeg</b> ) Format.</li>
+    </ul>
+    <hr>
+    <form action="https://www.formbackend.com/f/6cab2c9e2a7fbcef" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="Banner"><ion-icon name="image-outline"></ion-icon> Upload Banner or Poster</label>
+            <input type="file" name="banner" id="banner" multiple>
+        </div>
+
+        <div class="form-group">
+            <label for="service-id"><ion-icon name="keypad-outline"></ion-icon> Service I'd</label>
+            <input type="number" minlength="5" maxlength="5" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" name="service-id" id="service-id" placeholder="Enter Your Service I'd..." required>
+        </div>
+
+        <div class="form-group">
+            <label for="description"><ion-icon name="receipt-outline"></ion-icon> Description of the Service</label>
+            <textarea name="description" id="description" placeholder="Enter the description of the Service" required></textarea>
+        </div>
+
+        <div class="form-actions">
+            <input type="submit" value="⇡ Upload">
+            <input type="reset" value="⟳ Reset">
+        </div>
+    </form>
+</div>
+</body>
+</html>
